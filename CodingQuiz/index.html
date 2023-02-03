@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="Module4\style.css" />
+        <title>Coding Quiz</title>
+    </head>
+
+    <body>
+        <section class="container">
+            <header>
+                <h1>Coding Quiz</h1>
+                <h2 id="instructions">
+                    <p>Answer the following code-related questions within the time limit.</p>
+                    <p>Incorrect Answers will lower your score.</p>
+                    <h2 id="timer">Time Remaining</h2>
+                </h2>
+            </header>
+            <div class="quizbox">
+                <div class="display">
+                    <button id="topscores" onclick="showTopScores()">Top Scores</button>
+                </div>
+                <div class="quiz" id="quiz">
+                </div>
+                <div id="grade">
+                </div>
+                <button id="startquizbutton">Start Quiz</button>
+                <button id="backbutton" style="display: none;">Back</button>
+
+                <div id="quiz-container" style="display:none;">
+                  <p id="question"></p>
+                  <ul id="answers">
+                    <li><button class="answer-button">Answer 1</button></li>
+                    <li><button class="answer-button">Answer 2</button></li>
+                    <li><button class="answer-button">Answer 3</button></li>
+                    <li><button class="answer-button">Answer 4</button></li>
+                  </ul>
+                </div>
+                <form id="initialform">
+                      <body>
+                        <h1 id="youwin">You Win!</h1>
+                        <ul id="highScoresList" style="display:none;"></ul>
+                        <br>
+                        <label for="initials">Enter your initials: </label>
+                        <input type="text" id="initials" maxlength="2">
+                        <ul id="highScoresList"></ul>
+                        <button onclick="addScore()">Enter initials</button>
+                      </body>
+                  </form> 
+            </div>
+            <ul id="newhighscoreslist"></ul>
+        </section>
+
+        <script src="Module4\script.js"></script>
+</html>
